@@ -1,13 +1,21 @@
 *{
     margin: 0;
     padding: 0%;   
-    font-family: Airbus-Font;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* Fonts */
 @font-face {
     font-family: Airbus-Font;
     src: url(../fonts/aispec.ttf)
+} 
+
+.base-font, h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* Aimations */
@@ -33,7 +41,7 @@
 
 /* Header Config */
 header{
-    height: 40px;
+    height: 45px;
     width: 100%;
     background-color: #15232d;
     z-index: 999;
@@ -41,10 +49,29 @@ header{
     animation: fromTop 1s ease-out;
 }
 
+.logo-wrap{
+    height: 10px;
+    width: 150px;
+    background-color: green;
+}
+.logo-text{
+    font-family: Airbus-font;
+    font-size: 5vh;
+    color: #e1eaf0;
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    text-align: center !important; 
+    justify-content: center !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .nav-link{
     color: #e1eaf0;
     font-size: 22px;
-    align-items: center;
 }
 
 .nav-link:hover{
@@ -52,6 +79,7 @@ header{
 }
 
 /* H1 Text */
+
 .h1-div{
     padding-top: 70px;
     opacity: 0;
