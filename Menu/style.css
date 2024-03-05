@@ -3,17 +3,22 @@
     padding: 0%;   
 }
 
+@font-face {
+    font-family: Airbus;
+    src: url(../fonts/aispec.ttf)
+}
+
 body{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-family: "Airbus", sans-serif;
     font-style: normal;
-    background-image: url("../Imgs/menu_pc.png");
+    background-image: url("../Imgs/menu_cell.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: auto;
     transition: all 1s linear;
     overflow: hidden;
+    animation: fromTop 2s ease-in-out;
 }
 
 .wrap-everything{
@@ -27,21 +32,23 @@ body{
 }
 
 .wrap-img{
-    margin-bottom: 4vh;
-    animation: fromTop 2s linear;
+    margin-bottom: 2vh;
+    animation: fromTop 2s ease-in-out;
 }
 
 @keyframes fromTop{
     0%{
-        transform: translateY(-300px);
+        transform: translateY(-570px);
+        opacity: 0%;
     }
     100%{
         transform: translateY(0px);
+        opacity: 100%;
     }
 }
 
 .img-style{
-    width: 250px;
+    width: 280px;
     height: auto;
     border-radius: 100%;
 }
@@ -51,14 +58,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2vh;
 }
 
 p{
     font-size: 4rem;
     font-weight: 700;
-    color: white;
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    color: #e1eaf0;
+    text-shadow: 10px 10px 10px rgba(21, 35, 45, 0.3);
     filter:blur(0.5px);
     animation: show 2s linear;
     transition: all 200ms linear;
@@ -75,11 +81,11 @@ p{
 
 @media (width >= 800px){
     body{
-        background-image: url("../Imgs/menu_cell.png");
+        background-image: url("../Imgs/menu_pc.png");
     }
 
     .img-style{
-        width: 200px;
+        width: 330px;
     }
 
     p{

@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0%;   
+    font-family: Airbus-Font;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Airbus-Font;
+    src: url(../fonts/aispec.ttf)
+}
+
+/* Aimations */
+@keyframes fromTop{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+/* Header Config */
+header{
+    height: 40px;
+    width: 100%;
+    background-color: #15232d;
+    z-index: 999;
+    position: fixed;
+    animation: fromTop 1s ease-out;
+}
+
+.nav-link{
+    color: #e1eaf0;
+    font-size: 22px;
+    align-items: center;
+}
+
+.nav-link:hover{
+    color: #b3bbc0;
+}
+
+/* H1 Text */
+.h1-div{
+    padding-top: 70px;
+    opacity: 0;
+    animation: opacity 1s 1s ease-in;
+}
+
+.h1-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #26333b;
+}
+
+.h1-visible {
+    opacity: 1;
+}
+
+/* Internacionais */
+.carousel-div{
+    width: 500px;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+}
+
