@@ -71,18 +71,13 @@ header{
 }
 
 /* Internacionais */
-.carousel-div{
-    width: 500px;
-    height: auto;
+.carousel-wrap{
     display: flex;
     text-align: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
 
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: var(--bs-gutter-x, .75rem);
-    padding-left: var(--bs-gutter-x, .75rem);
 }
 
+/* PC Setup */
