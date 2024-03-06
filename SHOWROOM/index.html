@@ -11,128 +11,79 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>SHOWROOM PLANES</title>
 </head>
 <script src="./script.js"></script>
 
 <body>
     <header>
-        <div class="logo-wrap">
-            <h1 class="logo-text">AIRBOT</h1>
+        <div class="logo-header">
+            <img src="../Imgs/logo_text.png" class="img-logo-header" alt="Logo Airbot">
+        </div>
+        <div class="navigation-header">
+            <a href="../Menu/index.html">MENU</a>
+            <a href="../Order/index.html">ORDER</a>
         </div>
     </header>
-    <div class="h1-div" id="h1-div">
-        <h1 class="h1-header">CONFIRA OS MODELOS DE AVIÕES</h1>
-    </div>
-    <div class="carousel-wrap">
-        <div>
-            <div>
-                <h2 class="base-font">INTERNACIONAIS</h2>
-            </div>
-            <div>
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1">
-                        </button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2">
-                        </button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3">
-                        </button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                            aria-label="Slide 4">
-                        </button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                            aria-label="Slide 5">
-                        </button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="../Imgs/Internationals/a350.jpg" class="d-block w-100" alt="Airbus A350">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="../Imgs/Internationals/B777.jpg" class="d-block w-100" alt="Boeing 777">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Imgs/Internationals/B787.jpg" class="d-block w-100" alt="Boeing 787">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Imgs/Internationals/A380.jpg" class="d-block w-100" alt="Airbus A380">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../Imgs/Internationals/B747.jpg" class="d-block w-100" alt="Boeing 747">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
+    <div class="apresentation-wrap" id="apresentation-wrap">
+        <div class="apresentation-text">
+            <h2>Sua Escolha para Aeronaves de Qualidade</h2>
+            <p>A Airbot é uma empresa com mais de 40 anos de experiência no mercado de comercialização de aeronaves.
+                Nossa missão é oferecer responsabilidade e segurança aos nossos clientes, garantindo que bons negócios
+                sejam realizados na compra e troca de aeronaves.</p>
+        </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-wrap" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Imgs/apresentation/ap1.png" class="d-block w-100" alt="Apresentation 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Imgs/apresentation/ap2.png" class="d-block w-100" alt="Apresentation 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Imgs/apresentation/ap3.jpg" class="d-block w-100" alt="Apresentation 3">
                 </div>
             </div>
         </div>
+    </div>
 
+    <div>
         <div>
-            <div>
-                <h2>REGIONAIS</h2>
-            </div>
+            <h2>REGIONAIS</h2>
         </div>
+    </div>
 
+    <div>
         <div>
-            <div>
-                <h2>CARGUEIROS</h2>
-            </div>
-            <div>
-                <p>blabla</p>
-            </div>
+            <h2>CARGUEIROS</h2>
         </div>
+        <div>
+            <p>blabla</p>
+        </div>
+    </div>
 
+    <div>
         <div>
-            <div>
-                <h2>ULTRALEVES</h2>
-            </div>
-            <div>
-                <p>blabla</p>
-            </div>
+            <h2>ULTRALEVES</h2>
         </div>
+        <div>
+            <p>blabla</p>
+        </div>
+    </div>
 
+    <div>
         <div>
-            <div>
-                <h2>MILITARES</h2>
-            </div>
-            <div>
-                <p>blabla</p>
-            </div>
+            <h2>MILITARES</h2>
         </div>
+        <div>
+            <p>blabla</p>
+        </div>
+    </div>
 </body>
 
 </html>

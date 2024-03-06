@@ -1,3 +1,3 @@
 setTimeout(() => {
-    document.getElementById('h1-div').classList.add('h1-visible');
-}, 2000);
+    document.getElementById('apresentation-wrap').classList.add('visible');
+}, 1100);
