@@ -12,8 +12,6 @@
 
 .base-font, h1{
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 
 /* Aimations */
@@ -67,7 +65,6 @@ header{
 .navigation-header a{
     text-decoration: none;
     color: #e1eaf0;
-    font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     transition: 0.5s;
@@ -84,7 +81,6 @@ header{
     padding-top: 50px;
     opacity: 0;
     animation: opacity 0.5s 0.6s ease-out;
-    font-family: "Poppins",sans-serif;
     color: white;
     display: flex;
     align-items: center;
@@ -135,9 +131,7 @@ header{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.visible {
-    opacity: 1;
-}
+
 
 @media (max-width: 1080px) {
     .carousel-item{
@@ -185,34 +179,49 @@ header{
         font-size: 1vh;
     }
 }
-
-/* H1 Text */
-
-.h1-div{
-    padding-top: 50px;
-    
+/* All models wrap */
+.models-wrap{
+    padding: 0 7%;
     opacity: 0;
-    animation: opacity 1s 1s ease-in;
+    animation: opacity 0.5s 0.9s ease-in;
 }
-
-
-
-.h1-header{
+/* H2 Modelos */
+.text-international-wrap{
+    padding-top: 2%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     color: #26333b;
+    justify-content: space-between;
 }
 
-/* Internacionais */
-.carousel-wrap{
+.text-international-wrap h2{
+    font-weight: 700;
+    font-size: 4.2vh;
+}
+
+.text-international-wrap h3{
+    font-weight: 300;
+    font-size: 3.1vh;
+}
+
+.models-line{
+    border-top: 1px solid #15232d;
+    margin: 10px 0; 
+}
+
+/* Plane Models Style */
+
+.models-text-base{
     display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-
+    align-items: center;
+    color: #26333b;
+    justify-content: right;
 }
 
-/* PC Setup */
+.models-text-base h3{
+    font-weight: 300;
+    font-size: 3.1vh;
+}
+.visible {
+    opacity: 1;
+}
