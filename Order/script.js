@@ -9,27 +9,26 @@ function comecar() {
 
 function show(nome) {
     document.getElementById("label-name").textContent = nome;
-    // var div = document.getElementById("selects-div")
-    // if (nome && nome.trim !== "") {
-    //     div.style.display = "flex"
-    //     document.getElementById("exampleFormControlInput1").style.background = "none"
-    // } else {
-    //     document.getElementById("error").style.display = "block"
-    // }
+    var div = document.getElementById("models-wrap")
+    if (nome && nome.trim !== "") {
+        div.style.display = "flex"
+        window.location.href = "#button-wrap"
+    } else {
+        div.style.display = "none"
+        window.location.href = "#base-page"
+        alert("Insira um nome para continuar!");
+    }
 
-}
-
-function fechar() {
-    document, getElementById("error").style.display = "none"
-    document.getElementById("exampleFormControlInput1").style.display = "lightpink";
 }
 
 function calcularTotal() {
-    var selectPratos = document.getElementById("selectPrato");
-    var selectBebidas = document.getElementById("selectBebida");
-    var selectSobremesas = document.getElementById("selectSobremesa");
+    var selectInternational = document.getElementById("international");
+    var selectRegioal = document.getElementById("regional");
+    var selectCargueiros = document.getElementById("cargueiros");
+    var selectExecutivo = document.getElementById("executive");
+    var selectMilitary = document.getElementById("military");
     var resultadoSpan = document.getElementById("resultado");
-
+    
     var total = 0;
     var prato = 0;
     var bebida = 0;

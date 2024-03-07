@@ -4,7 +4,6 @@
     box-sizing: border-box;
     transition: 0.5;
 }
-
 /* Fonts */
 @font-face {
     font-family: Airbus-Font;
@@ -51,7 +50,7 @@ header {
     height: 50px;
     width: 100%;
     background-color: #15232d;
-    z-index: 999;
+    z-index: 998;
     position: fixed;
     animation: fromTop 0.8s ease-out;
     justify-content: space-between;
@@ -132,6 +131,68 @@ header {
     border-color: #15232d;
     box-shadow: 0 0 0 0.25rem #15232d85;
 }
+
+.btn-primary:active{
+    background-color: #15232d;
+    border-color: #15232d;
+}
+
+.form-control:focus{
+    border-color: #15232d93 !important;
+    box-shadow: 0 0 0 0.25rem #15232d4b !important;
+}
+
+.models-wrap{
+    transition: 0.5s;
+    display: none;
+    transition: 0.5s;
+    padding: 5%;
+    flex-direction: column;
+}
+
+.models-wrap h5{
+    justify-content: center;
+    text-align: center;
+}
+.line-wrap{
+    padding: 0 8%;
+}
+.models-line {
+    border-top: 1px solid #15232d;
+    margin: 10px 0;
+}
+
+.select-menus{
+    padding: 2%;
+}
+
+.button-wrap{
+    padding: 2%;
+    display: flex;
+    gap: 10px;
+    transition: 0.5s;
+    flex-wrap: wrap;
+}
+
+.form-select:focus{
+    border-color: #15232d93 !important;
+    box-shadow: 0 0 0 0.25rem #15232d4b !important;
+}
+
+.btn-outline-secondary{
+    border-color: #b3bbc0;
+}
+
+.btn-outline-secondary:active{
+    background-color: #b3bbc0;
+    border-color: #b3bbc0;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #b3bbc0;
+    border-color: #b3bbc0;
+}
+
 @media (max-width: 768px) {
     /* Header Config */
     header {
@@ -157,6 +218,10 @@ header {
         max-width: 100%;
     }
 
+    .models-wrap{
+        transition: 0.5s;
+        padding: 1%;
+    }
 }
 
 @media (max-width: 480px) {

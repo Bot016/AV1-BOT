@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,7 @@
     <title>Order</title>
 </head>
 <script src="./script.js"></script>
+
 <body>
     <header>
         <div class="logo-header">
@@ -43,54 +44,70 @@
                 <label for="floatingInputValue">Insira seu nome</label>
             </form>
             <button type="button" class="btn btn-primary" onclick="comecar()">Iniciar Compras</button>
-            <div class="models-wrap">
+            <div class="models-wrap" id="models-wrap">
                 <h5><label id="label-name"></label>, quais modelos você deseja?</h5>
-                <h6>Internacional</h6>
-                <select class="form-select" id="international">
-                    <option selected>Selecione o avião desejado</option>
-                    <option value="AIRBUS A350">AIRBUS A350</option>
-                    <option value="BOEING 777">BOEING 777</option>
-                    <option value="BOEING 787">BOEING 787</option>
-                    <option value="AIRBUS A380">AIRBUS A380</option>
-                    <option value="BOEING 747">BOEING 747</option>
-                </select>
-                <h6>Regional</h6>
-                <select class="form-select" id="regional">
-                    <option selected>Selecione o avião desejado</option>
-                    <option value="AIRBUS A320">AIRBUS A320</option>
-                    <option value="BOEING 737">BOEING 737</option>
-                    <option value="ATR 42">ATR 42</option>
-                    <option value="ATR 72">ATR 72</option>
-                    <option value="EMBRAER E190-E2">EMBRAER E190-E2</option>
-                </select>
-                <h6>Cargueiros</h6>
-                <select class="form-select" id="cargueiros">
-                    <option selected>Selecione o avião desejado</option>
-                    <option value="ANTONOV AN-225">ANTONOV AN-225</option>
-                    <option value="ANTONOV AN-124">ANTONOV AN-124</option>
-                    <option value="ILYUSHIN Il-76">ILYUSHIN Il-76</option>
-                    <option value="LOCKHEED C-5 GALAXY">LOCKHEED C-5 GALAXY</option>
-                    <option value="A300-600ST Beluga">A300-600ST Beluga</option>
-                </select>
-                <h6>Executivo</h6>
-                <select class="form-select" id="executive">
-                    <option selected>Selecione o avião desejado</option>
-                    <option value="FALCON 8X">FALCON 8X</option>
-                    <option value="PILATUS PC-24">PILATUS PC-24</option>
-                    <option value="GULFSTREAM G650">GULFSTREAM G650</option>
-                    <option value="EMBRAER PHRNOM 300">EMBRAER PHRNOM 300</option>
-                    <option value="BOMBARDIER GLOBAL 7500">BOMBARDIER GLOBAL 7500</option>
-                </select>
-                <h6>Militar</h6>
-                <select class="form-select" id="military">
-                    <option selected>Selecione o avião desejado</option>
-                    <option value="C-130 HERCULES">C-130 HERCULES</option>
-                    <option value="EMBRAER 314 SUPER TUCANO">EMBRAER 314 SUPER TUCANO</option>
-                    <option value="EMBRAER KC 390">EMBRAER KC 390</option>
-                    <option value="BOEING C-17 GLOBMASTER III">BOEING C-17 GLOBMASTER III</option>
-                    <option value="B-2 SPIRIT">B-2 SPIRIT</option>
-                </select>
-                <button type="button" class="btn btn-primary">Conferir Pedido</button>
+                <div class="line-wrap">
+                    <div class="models-line base-font"></div>
+                </div>
+                <div class="select-menus">
+                    <h6>Internacional</h6>
+                    <select class="form-select" id="international">
+                        <option selected>Selecione o avião desejado</option>
+                        <option value="AIRBUS A350">AIRBUS A350</option>
+                        <option value="BOEING 777">BOEING 777</option>
+                        <option value="BOEING 787">BOEING 787</option>
+                        <option value="AIRBUS A380">AIRBUS A380</option>
+                        <option value="BOEING 747">BOEING 747</option>
+                    </select>
+                </div>
+                <div class="select-menus">
+                    <h6>Regional</h6>
+                    <select class="form-select" id="regional">
+                        <option selected>Selecione o avião desejado</option>
+                        <option value="AIRBUS A320">AIRBUS A320</option>
+                        <option value="BOEING 737">BOEING 737</option>
+                        <option value="ATR 42">ATR 42</option>
+                        <option value="ATR 72">ATR 72</option>
+                        <option value="EMBRAER E190-E2">EMBRAER E190-E2</option>
+                    </select>
+                </div>
+                <div class="select-menus">
+                    <h6>Cargueiros</h6>
+                    <select class="form-select" id="cargueiros">
+                        <option selected>Selecione o avião desejado</option>
+                        <option value="ANTONOV AN-225">ANTONOV AN-225</option>
+                        <option value="ANTONOV AN-124">ANTONOV AN-124</option>
+                        <option value="ILYUSHIN Il-76">ILYUSHIN Il-76</option>
+                        <option value="LOCKHEED C-5 GALAXY">LOCKHEED C-5 GALAXY</option>
+                        <option value="A300-600ST Beluga">A300-600ST Beluga</option>
+                    </select>
+                </div>
+                <div class="select-menus">
+                    <h6>Executivo</h6>
+                    <select class="form-select" id="executive">
+                        <option selected>Selecione o avião desejado</option>
+                        <option value="FALCON 8X">FALCON 8X</option>
+                        <option value="PILATUS PC-24">PILATUS PC-24</option>
+                        <option value="GULFSTREAM G650">GULFSTREAM G650</option>
+                        <option value="EMBRAER PHRNOM 300">EMBRAER PHRNOM 300</option>
+                        <option value="BOMBARDIER GLOBAL 7500">BOMBARDIER GLOBAL 7500</option>
+                    </select>
+                </div>
+                <div class="select-menus">
+                    <h6>Militar</h6>
+                    <select class="form-select" id="military">
+                        <option selected>Selecione o avião desejado</option>
+                        <option value="C-130 HERCULES">C-130 HERCULES</option>
+                        <option value="EMBRAER 314 SUPER TUCANO">EMBRAER 314 SUPER TUCANO</option>
+                        <option value="EMBRAER KC 390">EMBRAER KC 390</option>
+                        <option value="BOEING C-17 GLOBMASTER III">BOEING C-17 GLOBMASTER III</option>
+                        <option value="B-2 SPIRIT">B-2 SPIRIT</option>
+                    </select>
+                </div>
+                <div class="button-wrap" id="button-wrap">
+                    <button type="button" class="btn btn-primary" onclick="calcularTotal()">Conferir Pedido</button>
+                    <button type="button" class="btn btn-outline-secondary">Limpar Formulário</button>
+                </div>
             </div>
         </div>
     </div>
