@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    transition: 0.5;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Airbus-Font;
+    src: url(../fonts/aispec.ttf)
+}
+
+/* Aimations */
+@keyframes fromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.base-font,
+h1 {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header,
+.navigation-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #15232d;
+    z-index: 999;
+    position: fixed;
+    animation: fromTop 0.8s ease-out;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.img-logo-header {
+    max-width: 160px;
+    width: auto;
+    transition: 0.5s;
+}
+
+.navigation-header {
+    gap: 2.5rem;
+}
+
+.navigation-header a {
+    text-decoration: none;
+    color: #e1eaf0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.navigation-header a:hover {
+    color: #b3bbc0;
+}
+
+/* Header text */
+.base-page{
+    padding-top: 50px;
+    opacity: 0%;
+    animation: opacity 0.5s 0.6s ease-out;
+}
+
+.header-text{
+    padding: 6% 8% !important;
+    display: flex;
+    align-items: center;
+    text-align:center;
+    justify-content: center;
+    flex-direction: column;
+    color: #15232d;
+}
+
+/* Forms */
+.forms-wrap{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    gap: 1vh;
+    transition: 0.5s;
+    max-width: 50%;
+}
+
+.header-text h1{
+    font-family: "Airbus-Font";
+    font-weight: 800;
+}
+
+.header-text p{
+    font-weight: 400;
+    font-size: 1.07rem;
+}
+
+.btn-primary{
+    background-color: #15232d;
+    border-color: #15232d;
+}
+
+.btn-primary:hover{
+    background-color: #111b22;
+    border-color: #111b22;
+}
+
+.btn-primary:focus{
+    background-color: #15232d;
+    border-color: #15232d;
+    box-shadow: 0 0 0 0.25rem #15232d85;
+}
+@media (max-width: 768px) {
+    /* Header Config */
+    header {
+        padding: 0 3%;
+    }
+
+    .navigation-header a {
+        font-size: 1.1rem;
+    }
+
+    .img-logo-header {
+        max-width: 120px;
+        width: auto;
+    }
+
+    .form-floating{
+        transition: 0.5s;
+        max-width: 100%;
+    }
+
+    .forms-wrap{
+        transition: 0.5s;
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* Header Config */
+    header {
+        padding: 0 3%;
+    }
+
+    .navigation-header a {
+        font-size: 1rem;
+    }
+}
+
+.visible{
+    opacity: 1;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Order</title>
+</head>
+<script src="./script.js"></script>
+<body>
+    <header>
+        <div class="logo-header">
+            <img src="../Imgs/logo_text.png" class="img-logo-header" alt="Logo Airbot">
+        </div>
+        <div class="navigation-header base-font">
+            <a href="../Menu/index.html">MENU</a>
+            <a href="../SHOWROOM/index.html">SHOWROOM</a>
+        </div>
+    </header>
+    <div class="base-page base-font" id="base-page">
+        <div class="header-text">
+            <h1>- DECOLE PARA O FUTURO -</h1>
+            <p>A Airbot é uma empresa que vende aviões de alta qualidade e segurança há mais de 40 anos. Temos uma ampla
+                variedade de modelos para atender às suas necessidades de transporte, lazer ou negócios. Nossos aviões
+                são equipados com tecnologia de ponta e oferecem conforto e eficiência. Não perca esta oportunidade de
+                adquirir o seu avião com condições especiais de pagamento. Compre agora e garanta já o seu!</p>
+        </div>
+        <div class="forms-wrap">
+            <h3>Vamos começar sua encomenda!</h3>
+            <form class="form-floating">
+                <input type="text" class="form-control" id="name-order">
+                <label for="floatingInputValue">Insira seu nome</label>
+            </form>
+            <button type="button" class="btn btn-primary" onclick="comecar()">Iniciar Compras</button>
+            <div class="models-wrap">
+                <h5><label id="label-name"></label>, quais modelos você deseja?</h5>
+                <h6>Internacional</h6>
+                <select class="form-select" id="international">
+                    <option selected>Selecione o avião desejado</option>
+                    <option value="AIRBUS A350">AIRBUS A350</option>
+                    <option value="BOEING 777">BOEING 777</option>
+                    <option value="BOEING 787">BOEING 787</option>
+                    <option value="AIRBUS A380">AIRBUS A380</option>
+                    <option value="BOEING 747">BOEING 747</option>
+                </select>
+                <h6>Regional</h6>
+                <select class="form-select" id="regional">
+                    <option selected>Selecione o avião desejado</option>
+                    <option value="AIRBUS A320">AIRBUS A320</option>
+                    <option value="BOEING 737">BOEING 737</option>
+                    <option value="ATR 42">ATR 42</option>
+                    <option value="ATR 72">ATR 72</option>
+                    <option value="EMBRAER E190-E2">EMBRAER E190-E2</option>
+                </select>
+                <h6>Cargueiros</h6>
+                <select class="form-select" id="cargueiros">
+                    <option selected>Selecione o avião desejado</option>
+                    <option value="ANTONOV AN-225">ANTONOV AN-225</option>
+                    <option value="ANTONOV AN-124">ANTONOV AN-124</option>
+                    <option value="ILYUSHIN Il-76">ILYUSHIN Il-76</option>
+                    <option value="LOCKHEED C-5 GALAXY">LOCKHEED C-5 GALAXY</option>
+                    <option value="A300-600ST Beluga">A300-600ST Beluga</option>
+                </select>
+                <h6>Executivo</h6>
+                <select class="form-select" id="executive">
+                    <option selected>Selecione o avião desejado</option>
+                    <option value="FALCON 8X">FALCON 8X</option>
+                    <option value="PILATUS PC-24">PILATUS PC-24</option>
+                    <option value="GULFSTREAM G650">GULFSTREAM G650</option>
+                    <option value="EMBRAER PHRNOM 300">EMBRAER PHRNOM 300</option>
+                    <option value="BOMBARDIER GLOBAL 7500">BOMBARDIER GLOBAL 7500</option>
+                </select>
+                <h6>Militar</h6>
+                <select class="form-select" id="military">
+                    <option selected>Selecione o avião desejado</option>
+                    <option value="C-130 HERCULES">C-130 HERCULES</option>
+                    <option value="EMBRAER 314 SUPER TUCANO">EMBRAER 314 SUPER TUCANO</option>
+                    <option value="EMBRAER KC 390">EMBRAER KC 390</option>
+                    <option value="BOEING C-17 GLOBMASTER III">BOEING C-17 GLOBMASTER III</option>
+                    <option value="B-2 SPIRIT">B-2 SPIRIT</option>
+                </select>
+                <button type="button" class="btn btn-primary">Conferir Pedido</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

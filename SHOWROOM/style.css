@@ -173,50 +173,57 @@ header {
     align-items: center;
     color: #26333b;
     justify-content: right;
+    padding-top: 50px;
 }
 
-.models-text-base h3{
+.models-text-base h3 {
     font-weight: 300;
     font-size: 3.5vh;
 }
 
 /* Card Base */
-.models-cards-wrap{
+.models-cards-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 2vh;
     height: 100%;
     width: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
 }
-.models-cards-wrap h5{
+
+.models-cards-wrap h5 {
     font-weight: 600;
 }
 
-.models-cards-wrap p, li{
+.models-cards-wrap p,
+li {
     font-weight: 300;
 }
 
-.card{
+.card {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     min-height: 460px;
     max-height: 460px;
 }
 
-.card-img-top{
+.card-img-top {
     min-height: 160px !important;
     max-height: 170px !important;
 
 }
 
-/* Card */
-@media (max-width: 950px){
-    .models-cards-wrap{
-        flex-direction: column;
-    }
+.list-group-item {
+    font-weight: 600;
 }
+
+.card-title {
+    font-weight: 700 !important;
+}
+
+/* Card */
 @media (max-width: 1080px) {
     .carousel-item {
         height: auto;
@@ -265,16 +272,11 @@ header {
     }
 
     .models-text-base h3 {
-        font-size: 1,5rem !important;
+        font-size: 1, 5rem !important;
     }
 
-    .models-cards-wrap{
+    .models-cards-wrap {
         padding-bottom: 20px;
-    }
-
-    .card{
-        min-height: 380px;
-        max-height: 400px;
     }
 }
 
