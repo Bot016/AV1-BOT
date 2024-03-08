@@ -43,7 +43,7 @@
                 <input type="text" class="form-control" id="name-order">
                 <label for="floatingInputValue">Insira seu nome</label>
             </form>
-            <button type="button" class="btn btn-primary" onclick="comecar()">Iniciar Compras</button>
+            <button type="button" class="btn btn-primary" onclick="start()">Iniciar Compras</button>
             <div class="models-wrap" id="models-wrap">
                 <h5><label id="label-name"></label>, quais modelos você deseja?</h5>
                 <div class="line-wrap">
@@ -105,12 +105,54 @@
                     </select>
                 </div>
                 <div class="button-wrap" id="button-wrap">
-                    <button type="button" class="btn btn-primary" onclick="calcularTotal()">Conferir Pedido</button>
-                    <button type="button" class="btn btn-outline-secondary">Limpar Formulário</button>
+                    <button type="button" class="btn btn-primary" onclick="calculateTotal()">Conferir Pedido</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="cleanPrices()">Limpar Formulário</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Confirme seu Pedido</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="prices-wrap">
+                        <div class="showInternational hidden-prices" id="showInternational">
+                            <h5>Internacional</h5>
+                            <span id="showPriceInternational"></span>
+                        </div>
+                        <div class="showRegional hidden-prices" id="showRegional">
+                            <h5>Regional</h5>
+                            <span id="showPriceRegional"></span>
+                        </div>
+                        <div class="showCargueiros hidden-prices" id="showCargueiros">
+                            <h5>Cargueiros</h5>
+                            <span id="showPriceCargueiro"></span>
+                        </div>
+                        <div class="showExecutive hidden-prices" id="showExecutive">
+                            <h5>Executivo</h5>
+                            <span id="showPriceExecutive"></span>
+                        </div>
+                        <div class="showMilitary hidden-prices" id="showMilitary">
+                            <h5>Militar</h5>
+                            <span id="showPriceMilitary"></span>
+                        </div>
+                        <div class="showTotal">
+                            <p>Total: <span id="totalCompra"></span></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+                            aria-label="Close" onclick="cleanPrices()">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </body>
 
 </html>

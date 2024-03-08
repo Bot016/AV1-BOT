@@ -193,6 +193,20 @@ header {
     border-color: #b3bbc0;
 }
 
+.modal-title{
+    font-weight: 800 !important;
+}
+
+.prices-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2vh;
+}
+
+.hidden-prices{
+    display: none;
+}
+
 @media (max-width: 768px) {
     /* Header Config */
     header {
