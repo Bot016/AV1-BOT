@@ -4,6 +4,7 @@
     box-sizing: border-box;
     transition: 0.5;
 }
+
 /* Fonts */
 @font-face {
     font-family: Airbus-Font;
@@ -80,69 +81,78 @@ header {
 }
 
 /* Header text */
-.base-page{
+.base-page {
+    opacity: 0%;
+    animation: opacity 0.5s 0.6s ease-out;
+}
+
+.header-text-wrap {
     padding-top: 50px;
     opacity: 0%;
     animation: opacity 0.5s 0.6s ease-out;
 }
 
-.header-text{
+.header-text {
     padding: 6% 8% !important;
     display: flex;
     align-items: center;
-    text-align:center;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
     color: #15232d;
 }
 
 /* Forms */
-.forms-wrap{
+.forms-wrap {
     display: flex;
     flex-direction: column;
-    padding: 0 5%;
+    padding: 0 3%;
     gap: 1vh;
     transition: 0.5s;
     max-width: 50%;
 }
 
-.header-text h1{
+.forms-wrap h3 {
+    font-size: 1.8rem;
+}
+
+.header-text h1 {
     font-family: "Airbus-Font";
     font-weight: 800;
 }
 
-.header-text p{
+.header-text p {
     font-weight: 400;
     font-size: 1.07rem;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #15232d;
     border-color: #15232d;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: #111b22;
     border-color: #111b22;
 }
 
-.btn-primary:focus{
+.btn-primary:focus {
     background-color: #15232d;
     border-color: #15232d;
     box-shadow: 0 0 0 0.25rem #15232d85;
 }
 
-.btn-primary:active{
+.btn-primary:active {
     background-color: #15232d;
     border-color: #15232d;
 }
 
-.form-control:focus{
+.form-control:focus {
     border-color: #15232d93 !important;
     box-shadow: 0 0 0 0.25rem #15232d4b !important;
 }
 
-.models-wrap{
+.models-wrap {
     transition: 0.5s;
     display: none;
     transition: 0.5s;
@@ -150,23 +160,25 @@ header {
     flex-direction: column;
 }
 
-.models-wrap h5{
+.models-wrap h5 {
     justify-content: center;
     text-align: center;
 }
-.line-wrap{
+
+.line-wrap {
     padding: 0 8%;
 }
+
 .models-line {
     border-top: 1px solid #15232d;
     margin: 10px 0;
 }
 
-.select-menus{
+.select-menus {
     padding: 2%;
 }
 
-.button-wrap{
+.button-wrap {
     padding: 2%;
     display: flex;
     gap: 10px;
@@ -174,40 +186,81 @@ header {
     flex-wrap: wrap;
 }
 
-.form-select:focus{
+.form-select:focus {
     border-color: #15232d93 !important;
     box-shadow: 0 0 0 0.25rem #15232d4b !important;
 }
 
-.btn-outline-secondary{
+.btn-outline-secondary {
     border-color: #b3bbc0;
 }
 
-.btn-outline-secondary:active{
+.btn-outline-secondary:active {
     background-color: #b3bbc0;
     border-color: #b3bbc0;
 }
 
-.btn-outline-secondary:hover{
+.btn-outline-secondary:hover {
     background-color: #b3bbc0;
     border-color: #b3bbc0;
 }
 
-.modal-title{
+.modal-title {
     font-weight: 800 !important;
 }
 
-.prices-wrap{
+.prices-wrap {
     display: flex;
     flex-direction: column;
     gap: 3.2vh;
 }
 
-.hidden-prices{
+.hidden-prices {
     display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.showTotal {
+    display: flex;
+    font-weight: 700 !important;
+    font-size: 1.08rem;
+    margin-top: 1rem;
+}
+
+.showTotal p {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: .7rem;
+    margin-top: .7rem;
+}
+
+/* Image Forms */
+.image-forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    padding: 4%;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+}
+
+.forms-and-image {
+    display: flex;
+    justify-content: space-around;
+    padding: 4% 0;
 }
 
 @media (max-width: 768px) {
+
     /* Header Config */
     header {
         padding: 0 3%;
@@ -222,23 +275,29 @@ header {
         width: auto;
     }
 
-    .form-floating{
+    .form-floating {
         transition: 0.5s;
         max-width: 100%;
     }
 
-    .forms-wrap{
+    .forms-wrap {
         transition: 0.5s;
         max-width: 100%;
     }
 
-    .models-wrap{
+    .models-wrap {
         transition: 0.5s;
         padding: 1%;
+    }
+
+    .image-forms {
+        transition: 0.5s;
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
+
     /* Header Config */
     header {
         padding: 0 3%;
@@ -249,6 +308,6 @@ header {
     }
 }
 
-.visible{
+.visible {
     opacity: 1;
 }

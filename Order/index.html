@@ -29,7 +29,7 @@
             <a href="../SHOWROOM/index.html">SHOWROOM</a>
         </div>
     </header>
-    <div class="base-page base-font" id="base-page">
+    <div class="header-text-wrap" id="header-text-wrap">
         <div class="header-text">
             <h1>- DECOLE PARA O FUTURO -</h1>
             <p>A Airbot é uma empresa que vende aviões de alta qualidade e segurança há mais de 40 anos. Temos uma ampla
@@ -37,77 +37,86 @@
                 são equipados com tecnologia de ponta e oferecem conforto e eficiência. Não perca esta oportunidade de
                 adquirir o seu avião com condições especiais de pagamento. Compre agora e garanta já o seu!</p>
         </div>
-        <div class="forms-wrap">
-            <h3>Vamos começar sua encomenda!</h3>
-            <form class="form-floating">
-                <input type="text" class="form-control" id="name-order">
-                <label for="floatingInputValue">Insira seu nome</label>
-            </form>
-            <button type="button" class="btn btn-primary" onclick="start()">Iniciar Compras</button>
-            <div class="models-wrap" id="models-wrap">
-                <h5><label id="label-name"></label>, quais modelos você deseja?</h5>
-                <div class="line-wrap">
-                    <div class="models-line base-font"></div>
+    </div>
+    <div class="base-page base-font" id="base-page">
+        <div class="forms-and-image">
+            <div class="forms-wrap">
+                <h3>Vamos começar sua encomenda!</h3>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="name-order">
+                    <label for="floatingInputValue">Insira seu nome</label>
+                </form>
+                <button type="button" class="btn btn-primary" onclick="start()">Iniciar Compras</button>
+                <div class="models-wrap" id="models-wrap">
+                    <h5><label id="label-name"></label>, quais modelos você deseja?</h5>
+                    <div class="line-wrap">
+                        <div class="models-line base-font"></div>
+                    </div>
+                    <div class="select-menus">
+                        <h6>Internacional</h6>
+                        <select class="form-select" id="international">
+                            <option selected>Selecione o avião desejado</option>
+                            <option value="AIRBUS A350">AIRBUS A350</option>
+                            <option value="BOEING 777">BOEING 777</option>
+                            <option value="BOEING 787">BOEING 787</option>
+                            <option value="AIRBUS A380">AIRBUS A380</option>
+                            <option value="BOEING 747">BOEING 747</option>
+                        </select>
+                    </div>
+                    <div class="select-menus">
+                        <h6>Regional</h6>
+                        <select class="form-select" id="regional">
+                            <option selected>Selecione o avião desejado</option>
+                            <option value="AIRBUS A320">AIRBUS A320</option>
+                            <option value="BOEING 737">BOEING 737</option>
+                            <option value="ATR 42">ATR 42</option>
+                            <option value="ATR 72">ATR 72</option>
+                            <option value="EMBRAER E190-E2">EMBRAER E190-E2</option>
+                        </select>
+                    </div>
+                    <div class="select-menus">
+                        <h6>Cargueiros</h6>
+                        <select class="form-select" id="cargueiros">
+                            <option selected>Selecione o avião desejado</option>
+                            <option value="ANTONOV AN-225">ANTONOV AN-225</option>
+                            <option value="ANTONOV AN-124">ANTONOV AN-124</option>
+                            <option value="ILYUSHIN Il-76">ILYUSHIN Il-76</option>
+                            <option value="LOCKHEED C-5 GALAXY">LOCKHEED C-5 GALAXY</option>
+                            <option value="A300-600ST Beluga">A300-600ST Beluga</option>
+                        </select>
+                    </div>
+                    <div class="select-menus">
+                        <h6>Executivo</h6>
+                        <select class="form-select" id="executive">
+                            <option selected>Selecione o avião desejado</option>
+                            <option value="FALCON 8X">FALCON 8X</option>
+                            <option value="PILATUS PC-24">PILATUS PC-24</option>
+                            <option value="GULFSTREAM G650">GULFSTREAM G650</option>
+                            <option value="EMBRAER PHRNOM 300">EMBRAER PHRNOM 300</option>
+                            <option value="BOMBARDIER GLOBAL 7500">BOMBARDIER GLOBAL 7500</option>
+                        </select>
+                    </div>
+                    <div class="select-menus">
+                        <h6>Militar</h6>
+                        <select class="form-select" id="military">
+                            <option selected>Selecione o avião desejado</option>
+                            <option value="C-130 HERCULES">C-130 HERCULES</option>
+                            <option value="EMBRAER 314 SUPER TUCANO">EMBRAER 314 SUPER TUCANO</option>
+                            <option value="EMBRAER KC 390">EMBRAER KC 390</option>
+                            <option value="BOEING C-17 GLOBMASTER III">BOEING C-17 GLOBMASTER III</option>
+                            <option value="B-2 SPIRIT">B-2 SPIRIT</option>
+                        </select>
+                    </div>
+                    <div class="button-wrap" id="button-wrap">
+                        <button type="button" class="btn btn-primary" onclick="calculateTotal()">Conferir
+                            Pedido</button>
+                        <button type="button" class="btn btn-outline-secondary" onclick="cleanForms()">Limpar
+                            Formulário</button>
+                    </div>
                 </div>
-                <div class="select-menus">
-                    <h6>Internacional</h6>
-                    <select class="form-select" id="international">
-                        <option selected>Selecione o avião desejado</option>
-                        <option value="AIRBUS A350">AIRBUS A350</option>
-                        <option value="BOEING 777">BOEING 777</option>
-                        <option value="BOEING 787">BOEING 787</option>
-                        <option value="AIRBUS A380">AIRBUS A380</option>
-                        <option value="BOEING 747">BOEING 747</option>
-                    </select>
-                </div>
-                <div class="select-menus">
-                    <h6>Regional</h6>
-                    <select class="form-select" id="regional">
-                        <option selected>Selecione o avião desejado</option>
-                        <option value="AIRBUS A320">AIRBUS A320</option>
-                        <option value="BOEING 737">BOEING 737</option>
-                        <option value="ATR 42">ATR 42</option>
-                        <option value="ATR 72">ATR 72</option>
-                        <option value="EMBRAER E190-E2">EMBRAER E190-E2</option>
-                    </select>
-                </div>
-                <div class="select-menus">
-                    <h6>Cargueiros</h6>
-                    <select class="form-select" id="cargueiros">
-                        <option selected>Selecione o avião desejado</option>
-                        <option value="ANTONOV AN-225">ANTONOV AN-225</option>
-                        <option value="ANTONOV AN-124">ANTONOV AN-124</option>
-                        <option value="ILYUSHIN Il-76">ILYUSHIN Il-76</option>
-                        <option value="LOCKHEED C-5 GALAXY">LOCKHEED C-5 GALAXY</option>
-                        <option value="A300-600ST Beluga">A300-600ST Beluga</option>
-                    </select>
-                </div>
-                <div class="select-menus">
-                    <h6>Executivo</h6>
-                    <select class="form-select" id="executive">
-                        <option selected>Selecione o avião desejado</option>
-                        <option value="FALCON 8X">FALCON 8X</option>
-                        <option value="PILATUS PC-24">PILATUS PC-24</option>
-                        <option value="GULFSTREAM G650">GULFSTREAM G650</option>
-                        <option value="EMBRAER PHRNOM 300">EMBRAER PHRNOM 300</option>
-                        <option value="BOMBARDIER GLOBAL 7500">BOMBARDIER GLOBAL 7500</option>
-                    </select>
-                </div>
-                <div class="select-menus">
-                    <h6>Militar</h6>
-                    <select class="form-select" id="military">
-                        <option selected>Selecione o avião desejado</option>
-                        <option value="C-130 HERCULES">C-130 HERCULES</option>
-                        <option value="EMBRAER 314 SUPER TUCANO">EMBRAER 314 SUPER TUCANO</option>
-                        <option value="EMBRAER KC 390">EMBRAER KC 390</option>
-                        <option value="BOEING C-17 GLOBMASTER III">BOEING C-17 GLOBMASTER III</option>
-                        <option value="B-2 SPIRIT">B-2 SPIRIT</option>
-                    </select>
-                </div>
-                <div class="button-wrap" id="button-wrap">
-                    <button type="button" class="btn btn-primary" onclick="calculateTotal()">Conferir Pedido</button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="cleanPrices()">Limpar Formulário</button>
-                </div>
+            </div>
+            <div class="image-forms">
+                <img class="image" src="../Imgs/pexels-francesco-ungaro-1973182.jpg">
             </div>
         </div>
     </div>
@@ -120,39 +129,39 @@
                 </div>
                 <div class="modal-body">
                     <div class="prices-wrap">
-                        <div class="showInternational hidden-prices" id="showInternational">
+                        <div class=" hidden-prices" id="showInternational">
                             <h5>Internacional</h5>
-                            <span id="showPriceInternational"></span>
+                            <span id="showInternationalPrice"></span>
                         </div>
-                        <div class="showRegional hidden-prices" id="showRegional">
+                        <div class="hidden-prices" id="showRegional">
                             <h5>Regional</h5>
-                            <span id="showPriceRegional"></span>
+                            <span id="showRegionalPrice"></span>
                         </div>
-                        <div class="showCargueiros hidden-prices" id="showCargueiros">
+                        <div class="hidden-prices" id="showCargueiros">
                             <h5>Cargueiros</h5>
-                            <span id="showPriceCargueiro"></span>
+                            <span id="showCargueirosPrice"></span>
                         </div>
-                        <div class="showExecutive hidden-prices" id="showExecutive">
+                        <div class="hidden-prices" id="showExecutive">
                             <h5>Executivo</h5>
-                            <span id="showPriceExecutive"></span>
+                            <span id="showExecutivePrice"></span>
                         </div>
-                        <div class="showMilitary hidden-prices" id="showMilitary">
+                        <div class="hidden-prices" id="showMilitary">
                             <h5>Militar</h5>
-                            <span id="showPriceMilitary"></span>
+                            <span id="showMilitaryPrice"></span>
                         </div>
-                        <div class="showTotal">
-                            <p>Total: <span id="totalCompra"></span></p>
-                        </div>
+                    </div>
+                    <div class="showTotal">
+                        <p>Total: <span class="badge bg-success" id="totalCompra"></span></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
                             aria-label="Close" onclick="cleanPrices()">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Confirmar</button>
+                        <button type="button" class="btn btn-primary" onclick="send()">Confirmar</button>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>

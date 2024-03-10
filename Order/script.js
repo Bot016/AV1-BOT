@@ -1,14 +1,13 @@
 setTimeout(() => {
     document.getElementById('base-page').classList.add('visible');
-    
-    var modal = new bootstrap.Modal(document.getElementById('reg-modal'));
-    modal.show();   
+    document.getElementById('header-text-wrap').classList.add('visible');
 }, 1100);
 
 function start() {
     var nome = document.getElementById("name-order").value;
     show(nome);
 }
+
 
 function show(nome) {
     document.getElementById("label-name").textContent = nome;
@@ -23,9 +22,8 @@ function show(nome) {
     }
 }
 
-const idsShow = ["showPriceInternational","showPriceRegional", "showPriceCargueiro", "showPriceExecutive", "showPriceMilitary"]
 const categorias = ["showInternational", "showRegional", "showCargueiros", "showExecutive", "showMilitary"];
-
+var globalTotal = 0
 
 function calculateTotal() {
     cleanPrices()
@@ -74,17 +72,17 @@ function calculateTotal() {
         ["BOEING C-17 GLOBMASTER III", 200000000],
         ["B-2 SPIRIT", 2000000000]
     ];
-    
-    const selectCategory = []
-    const selectAirplane = []
-    const airplanePrice = []
+
+    var selectCategory = []
+    var selectAirplane = []
+    var airplanePrice = []
     const valueVetors = [valueInternatonal, valueRegioal, valueCargueiros, valueExecutivo, valueMilitary];
 
     for (let i = 0; i < selectVetors.length; i++) {
-        const selectedOption = selectVetors[i].value;
-        const CategorySlect = categorias[i];
+        var selectedOption = selectVetors[i].value;
+        var CategorySlect = categorias[i];
         for (let x = 0; x < valueVetors[i].length; x++) {
-            const aircraft = valueVetors[i][x];
+            var aircraft = valueVetors[i][x];
             if (selectedOption === aircraft[0]) {
                 total += aircraft[1];
                 selectCategory.push(CategorySlect)
@@ -94,48 +92,60 @@ function calculateTotal() {
             }
         }
     }
-
     showPrice(total, selectCategory, selectAirplane, airplanePrice)
 }
 
 function showPrice(total, selectCategory, aircraft, price) {
-    const matrizIdsClass = [
-        ["showPriceInternational", "showInternational"],
-        ["showPriceRegional", "showRegional"],
-        ["showPriceCargueiro", "showCargueiros"],
-        ["showPriceExecutive", "showExecutive"],
-        ["showPriceMilitary", "showMilitary"]
-    ]
-
-    for (let a = 0; a < selectCategory.length; a++){
-        document.getElementById(matrizIdsClass[a][0]).style.display = "flex";
-        document.getElementById(matrizIdsClass[a][a]).textContent = aircraft[a] +": "+ price[a].toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    for (let a = 0; a < selectCategory.length; a++) {
+        document.getElementById(selectCategory[a]).style.display = "flex";
+        if (categorias.includes(selectCategory[a])) {
+            document.getElementById(selectCategory[a] + "Price").textContent = aircraft[a] + ": " + price[a].toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+        }
     }
-    document.getElementById("totalCompra").textContent = total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    total = total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    document.getElementById("totalCompra").textContent = total
+    globalTotal = total;
 
     var modal = new bootstrap.Modal(document.getElementById('reg-modal'));
     modal.show();
 }
 
 function cleanPrices() {
-    for (let a = 0; a < idsShow.length; a++){
-        document.getElementById(idsShow[a]).textContent = "";
+    for (let a = 0; a < categorias.length; a++) {
+        document.getElementById(categorias[a] + "Price").textContent = "";
         document.getElementById(categorias[a]).style.display = "none";
     }
 }
-    document.getElementById("pedido-pronto").style.display = "block"
-    document.getElementById("sobremesa-pronto").textContent = selectSobremesas.value + " R$ " + sobremesa.toFixed(2);
-    document.getElementById("bebida-pronto").textContent = selectBebidas.value + " R$ " + bebida.toFixed(2);
-    document.getElementById("prato-pronto").textContent = selectPratos.value + " R$ " + prato.toFixed(2);
-    resultadoSpan.textContent = "R$" + total.toFixed(2);
 
-
-function limpar() {
-    document.getElementById("pedido-pronto").style.display = "none";
-    document.getElementById("selects-div").style.display = "none";
-    document.getElementById("exampleFormControlInput1").value = "";
-    document.getElementById("resultado").value = "";
-    document.getElementById("selectBebida").value = "Selecione sua bebida";
-    document.getElementById("selectPrato").value = "Selecione seu Prato";
-    document.getElementById("selectSobremesa").value = "Selecione sua sobremesa";
+function cleanForms() {
+    cleanPrices()
+    const selectPlanes = ["international", "regional", "cargueiros", "executive", "military"]
+    for (let a = 0; a < selectPlanes.length; a++) {
+        document.getElementById(selectPlanes[a]).value = "Selecione o avião desejado"
+    }
 }
+
+function getDate() {
+    var date = new Date()
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+
+    const FortmatDay = day < 10 ? `0${day}` : day;
+    const FormatMonth = month < 10 ? `0${month}` : month;
+
+    return `${FortmatDay}/${FormatMonth}/${year}`;
+}
+
+function send() {
+    if (globalTotal != "") {
+        var numeroTelefone = "5541992216924";
+
+        var linkWhatsApp = "https://wa.me/" + numeroTelefone + "?text=Total da Compra: " + globalTotal + " - " + "Dia da Compra: " + getDate()
+
+        window.open(linkWhatsApp, "_blank")
+    }
+}
+
+
+
