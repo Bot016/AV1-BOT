@@ -5,6 +5,11 @@
     transition: 0.5;
 }
 
+body{
+    height: 100%;
+    width: 100%;
+}
+
 /* Fonts */
 @font-face {
     font-family: Airbus-Font;
@@ -110,6 +115,7 @@ header {
     gap: 1vh;
     transition: 0.5s;
     max-width: 50%;
+    min-width: 900px;
 }
 
 .forms-wrap h3 {
@@ -238,11 +244,12 @@ header {
 
 /* Image Forms */
 .image-forms {
+    transform: 0.5s;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 550px;
+    max-width: 750px;
     padding: 4%;
     transition: 0.5s;
     width: 100%;
@@ -256,7 +263,8 @@ header {
 .forms-and-image {
     display: flex;
     justify-content: space-around;
-    padding: 4% 0;
+    padding: 0%;
+    transition: 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -307,6 +315,24 @@ header {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 1400px) {
+
+    .forms-and-image{
+        padding: 4%;
+        transition: 0.5s;
+    }
+
+    .forms-wrap{
+        min-width: auto;
+    }
+    
+    .image-forms{
+        transition: 0.5s;
+        max-width: 550px;
+    }
+}
+
 
 .visible {
     opacity: 1;
